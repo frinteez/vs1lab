@@ -125,6 +125,7 @@ input[type="submit"]:hover {
 
 .col-8 {
   width: calc(66.66% - 1rem);
+
 }
 
 .col-9 {
@@ -205,11 +206,11 @@ input[type="submit"]:hover {
   list-style-type: none;
 }
 .discovery__map{
-  margin-left: 15rem;
-  /*margin-top: -9.5rem;*/
+  margin-left: 10rem;
 }
 .discovery__map img {
   width: 100%;
+  height: 100%;
 }
 .discovery__map span {
   color: var(--gray-color);
