@@ -126,6 +126,7 @@ input[type="submit"]:hover {
 
 .col-8 {
   width: calc(66.66% - 1rem);
+
 }
 
 .col-9 {
@@ -206,11 +207,11 @@ input[type="submit"]:hover {
   list-style-type: none;
 }
 .discovery__map{
-  margin-left: 15rem;
-  /*margin-top: -9.5rem;*/
+  margin-left: 10rem;
 }
 .discovery__map img {
   width: 100%;
+  height: 100%;
 }
 .discovery__map span {
   color: var(--gray-color);
@@ -236,3 +237,21 @@ input[type="submit"]:hover {
 
 
 /* ### TODO ### Media Queries */
+@media screen and (max-width: 850px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 100%;
+    margin-right: 0;
+  }
+ 
+  .col-8 {
+      margin: 0 auto; 
+      display: block; 
+      margin-top: 5%;
+    
+    }
+  
+  
+}
