@@ -172,21 +172,21 @@ input[type="submit"]:hover {
 /* ### TODO ### Styles for Main Component */
 
 .main {
-  gap: 30px;
+  gap: 30px; /* Lücke zwischen den beiden Grid Elementen */
   padding: 3rem;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto; /* Zentriert den Hauptteil */
 }
 
 .main h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
 }
 
 
 /* ### TODO ### Styles for Tagging component */
 
 .main__tagging input {
-  width: min(12rem, 100%);
+  width: min(12rem, 100%); /* entweder 12rem oder 100% der verfügbaren Breite */
 }
 
 
@@ -213,8 +213,8 @@ input[type="submit"]:hover {
   width: 100%;
   height: 100%;
 }
-.discovery__map span {
-  color: var(--gray-color);
+.discovery__map span { /* Schriftzug unter der Map */
+  color: var(--gray-color); 
 }
 
 .discovery__results li {
@@ -225,7 +225,7 @@ input[type="submit"]:hover {
   border: 1px solid var(--border-color);
   cursor: pointer;
 }
-.discovery__results li:not(:first-child) {
+.discovery__results li:not(:first-child) { 
   margin-top: 1rem;
 }
 /* ### TODO ### Styles for Footer Component */
@@ -244,7 +244,7 @@ input[type="submit"]:hover {
   }
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     width: 100%;
-    margin-right: 0;
+
   }
  
   .col-8 {
