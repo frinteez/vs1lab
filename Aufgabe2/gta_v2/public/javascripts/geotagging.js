@@ -118,7 +118,50 @@ class MapManager {
  */
 // ... your code here ...
 
+// Function to update the location on the page
+function updateLocation() {
+    // Call the findLocation method of LocationHelper to get current location
+    LocationHelper.findLocation((locationHelper) => {
+        // Retrieve latitude and longitude from locationHelper
+        latitude = locationHelper.latitude;
+        longitude = locationHelper.longitude;
+
+        // Find latitude and longitude input fields in the tagging form and update their values
+        taggingLatitudeInput = document.querySelector('#lat');
+        taggingLongitudeInput = document.querySelector('#long');
+        if (taggingLatitudeInput && taggingLongitudeInput) {
+            taggingLatitudeInput.value = latitude;
+            taggingLongitudeInput.value = longitude;
+        }
+
+        // Find latitude and longitude hidden input fields in the discovery form and update their values
+        discoveryLatitudeInput = document.querySelector('#discoveryLatitude');
+        discoveryLongitudeInput = document.querySelector('#discoveryLongitude');
+        if (discoveryLatitudeInput && discoveryLongitudeInput) {
+            discoveryLatitudeInput.value = latitude;
+            discoveryLongitudeInput.value = longitude;
+        }
+    
+        mapManager = new MapManager();
+        mapManager.initMap(latitude,longitude);
+        mapManager.updateMarkers(latitude,longitude);
+
+     // Find the <img> element by its id and remove it
+        mapViewImg = document.getElementById('mapView');
+        mapViewImg.remove();
+
+
+    // Find the <p> element by its parent and remove it
+        mapViewSpan = document.querySelector('.discovery__map span');
+        mapViewSpan.remove();
+    });
+}        
+// Call updateLocation automatically when the document is fully loaded
+document.addEventListener("DOMContentLoaded", updateLocation);
+
+
+
 // Wait for the page to fully load its DOM content, then call updateLocation
 document.addEventListener("DOMContentLoaded", () => {
-    alert("Please change the script 'geotagging.js'");
+    alert("TEST");
 });
