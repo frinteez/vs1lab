@@ -7,6 +7,9 @@
 */
 
 /* Global styling */
+#map{
+  height: 500px;
+}
 
 html {
   box-sizing: border-box;
@@ -45,9 +48,8 @@ a {
 }
 
 /* ### TODO ### Styles for other HTML elements */
-h2 {
-  margin-bottom: 1rem;
-}
+
+
 
 fieldset {
   padding: 1rem;
@@ -58,7 +60,7 @@ fieldset:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-label, 
+label,
 input {
   display: block;
 }
@@ -85,7 +87,6 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   background-color: var(--border-color);
-
 }
 /* Grid styles (no changes required) */
 
@@ -130,7 +131,7 @@ input[type="submit"]:hover {
 }
 
 .col-9 {
-  width: calc(75% - 1re);
+  width: calc(75% - 1rem);
 }
 
 .col-10 {
@@ -149,6 +150,8 @@ input[type="submit"]:hover {
 /* ### TODO ### Styles for Header Component */
 
 .header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 3rem;
   background-color: var(--background-color);
@@ -156,7 +159,7 @@ input[type="submit"]:hover {
 }
 
 .header img {
-  width: 3.5rem;
+  width: 3rem;
 }
 
 .header h1 {
@@ -172,34 +175,34 @@ input[type="submit"]:hover {
 /* ### TODO ### Styles for Main Component */
 
 .main {
-  gap: 30px; /* Lücke zwischen den beiden Grid Elementen */
+  display: flex;  
+  flex-direction: row;
+  gap: 30px;
   padding: 3rem;
   max-width: 1440px;
-  margin: 0 auto; /* Zentriert den Hauptteil */
+  margin: 0 auto;
 }
 
 .main h2 {
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 
 /* ### TODO ### Styles for Tagging component */
 
 .main__tagging input {
-  width: min(12rem, 100%); /* entweder 12rem oder 100% der verfügbaren Breite */
+  width: min(12rem, 100%);
 }
 
 
 /* ### TODO ### Styles for Discovery component */
-.main__discovery {
 
-}
 .discovery__search input {
   width: min(12rem, 100%);
 }
 
 .discovery__wrapper {
-
+  display: flex;
   margin-top: 2rem;
 }
 
@@ -213,8 +216,8 @@ input[type="submit"]:hover {
   width: 100%;
   height: 100%;
 }
-.discovery__map span { /* Schriftzug unter der Map */
-  color: var(--gray-color); 
+.discovery__map span {
+  color: var(--gray-color);
 }
 
 .discovery__results li {
@@ -225,7 +228,7 @@ input[type="submit"]:hover {
   border: 1px solid var(--border-color);
   cursor: pointer;
 }
-.discovery__results li:not(:first-child) { 
+.discovery__results li:not(:first-child) {
   margin-top: 1rem;
 }
 /* ### TODO ### Styles for Footer Component */
@@ -244,15 +247,16 @@ input[type="submit"]:hover {
   }
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     width: 100%;
-
+    margin-right: 0;
   }
  
   .col-8 {
     margin: 0 auto; 
     display: block; 
-    margin-top: 2rem;
-    
+    margin-top: 2rem;   
   }
-  
-  
+
+  #map { 
+    height: 500px;
+  }
 }

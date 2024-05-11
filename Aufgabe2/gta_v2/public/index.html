@@ -5,6 +5,12 @@
 <html lang="en">
 
 <head>
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeoTagApp</title>
@@ -32,13 +38,13 @@
                 <fieldset>
                     <legend>Add a new GeoTag</legend>
                     <label for="lat" >Latitude:</label>
-                    <input type="number" id="lat" name="latitude" value="49.01379" readonly >
+                    <input type="number" id="lat" name="latitude" value="49.01379"  readonly >
                     <label for="long" >Longitude:</label>
                     <input type="number" id="long" name="longitude" value="8.390071" readonly >
                     <label for="nametext" >Name:</label>
-                    <input type="text" id="nametext" name="name_text" maxlength="10" placeholder="e.g. Central Berlin" required>
+                    <input type="text" id="nametext" name="name_text" maxlength="10" value="e.g. Central Berlin" required>
                     <label for="hash" >Hashtag:</label>
-                    <input type="text" id="hash" name="hashtag" pattern="#[A-Za-z]{1,10}" placeholder="e.g. #ber" optional >
+                    <input type="text" id="hash" name="hashtag" pattern="#[A-Za-z]{1,10}" value="e.g. #ber" optional >
                     <input type="submit" id="button1" name="absendebutton" value="Add Tag"  >
                   </fieldset>
                
@@ -58,7 +64,7 @@
                 <fieldset>
                     <legend>Search</legend>
                     <label for="term">Search term on keywords:</label>
-                    <input type="search" id="term"  name="searchterm" placeholder="e.g. Berlin"  >
+                    <input type="search" id="term"  name="searchterm" value="e.g. Berlin"  >
                     <input type="submit" id="button2" name="absendebutton2" value="Search">
                     <input type="hidden" name="latitude" id="discoveryLatitude" value="">
                     <input type="hidden" name="longitude" id="discoveryLongitude" value="">
@@ -78,7 +84,7 @@
                     </ul>
                 </div>
 
-                <div class="discovery__map col-8">
+                <div class="discovery__map col-8" id="map">
                     <img src="./images/mapview.jpg" alt="a map with locations" id="mapView" />
                     <span>Result map</span>
                 </div>
@@ -90,12 +96,10 @@
     <footer class="footer">
         <span>(c) 2021/22 HKA_IWI_VSYS</span>
     </footer>
-
     <!-- Load JavaScripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./javascripts/geotagging.js"></script>
-
 </body>
 
 </html>
